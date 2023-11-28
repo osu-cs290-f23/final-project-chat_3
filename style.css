@@ -1,0 +1,174 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+#menu-bar {
+  background-color: #34495e; /* Menu bar background color */
+  padding: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+}
+
+#user-name {
+  color: #ffffff; /* Text color for user name */
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+#menu-bar-text {
+  color: #ffffff; /* Text color for the menu bar text */
+  font-size: 18px; /* Adjust the font size as needed */
+  width: 50%;
+}
+
+.message {
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.message.sent {
+  background-color: #4caf50; /* Green for sent messages */
+  color: #fff;
+}
+
+.message.received {
+  background-color: #e6e6e6; /* Light gray for received messages */
+}
+
+#chat-window {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#user-name {
+  color: #ffffff; /* Text color for user name */
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+#message-container {
+  overflow-y: scroll;
+  max-height: calc(113vh - 150px); /* Adjusted height based on screen height */
+  scrollbar-width: thin; /* Firefox */
+  padding-top: 5px;
+}
+
+#message-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#message-container::-webkit-scrollbar-thumb {
+  background-color: #4caf50; /* Color of the scrollbar thumb */
+  border-radius: 4px;
+}
+
+#send-window {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Adjusted box-shadow for top shadow effect */
+}
+
+#message-input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 5px; /* Added margin to the right of the input */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#send-button {
+  padding: 8px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+#send-button:hover {
+  background-color: #45a049;
+}
+
+.user-action {
+  color: #888;
+  font-style: italic;
+}
+
+.user-action.join {
+  color: #2ecc71; /* Green for user join messages */
+}
+
+.user-action.disconnect {
+  color: #e74c3c; /* Red for user disconnect messages */
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode #menu-bar {
+  background-color: #2c2c2c; /* Dark mode menu bar background color */
+}
+
+#message-container {
+  overflow-y: scroll;
+  max-height: calc(113vh - 150px); /* Adjusted height based on screen height */
+  scrollbar-width: thin; /* Firefox */
+}
+
+#message-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#message-container::-webkit-scrollbar-thumb {
+  background-color: #4caf50; /* Color of the scrollbar thumb */
+  border-radius: 4px;
+}
+
+.dark-mode #message-container::-webkit-scrollbar-thumb {
+  background-color: #34495e; /* Dark mode color for the scrollbar thumb */
+}
+
+.dark-mode #send-window {
+  background-color: #2c2c2c; /* Dark mode background color */
+}
+
+.dark-mode #user-name {
+  color: #ffffff; /* Dark mode text color for user name */
+}
+
+.dark-mode #message-input {
+  background-color: #2c2c2c; /* Dark mode background color for input */
+  color: #ffffff;
+}
+
+.dark-mode #send-button {
+  background-color: #34495e; /* Dark mode background color for the send button */
+  color: #ffffff;
+}
+
+.dark-mode #send-button:hover {
+  background-color: #2c3e50;
+}
