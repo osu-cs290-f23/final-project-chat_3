@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Cairo Play", sans-serif;
   background-color: #f2f2f2;
   margin: 0;
   padding: 0;
@@ -28,6 +28,7 @@ body {
   padding: 8px;
   margin-bottom: 8px;
   border-radius: 4px;
+  /* max-width: 70%; */
 }
 
 .message.sent {
@@ -35,9 +36,12 @@ body {
   color: #fff;
 }
 
+
 .message.received {
   background-color: #e6e6e6; /* Light gray for received messages */
 }
+
+
 
 #chat-window {
   max-width: 600px;
@@ -54,10 +58,10 @@ body {
 }
 
 #message-container {
-  overflow-y: scroll;
-  max-height: calc(113vh - 150px); /* Adjusted height based on screen height */
-  scrollbar-width: thin; /* Firefox */
+  max-height: calc(113vh - 150px);
   padding-top: 5px;
+  margin: 10px; /* Add margin for spacing */
+  word-wrap: break-word; /* Break long words */
 }
 
 #message-container::-webkit-scrollbar {
@@ -82,6 +86,7 @@ body {
 }
 
 #message-input {
+  font-family: "Cairo Play", sans-serif;
   flex: 1;
   padding: 8px;
   margin-right: 5px; /* Added margin to the right of the input */
@@ -117,7 +122,7 @@ body {
 }
 
 .dark-mode-toggle {
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
   font-size: 24px;
@@ -171,4 +176,14 @@ body {
 
 .dark-mode #send-button:hover {
   background-color: #2c3e50;
+}
+
+.dark-mode .message.sent {
+  background-color: #34495e; /* Dark mode background color for sent messages */
+  color: #fff;
+}
+
+.dark-mode .message.received {
+  background-color: #2c2c2c; /* Dark mode background color for received messages */
+  color: #fff;
 }
