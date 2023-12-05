@@ -17,20 +17,21 @@ app.get('/', (req, res) => {
 io.on('connection', socket => {
   socket.on('new-user', name => {
     users[socket.id] = name;
-    socket.broadcast.emit('user-connected', name);
+    // Notify the connected user about all existing users
+    socket.emit('existing-users', Object.values(users));
+    // Broadcast the new user to all other users
+    socket.broadcast.emit('new-user-joined', name);
   });
 
-  socket.on('send-chat-message', message => {
-    console.log(`Message received from ${users[socket.id]}: ${message}`);
-    socket.broadcast.emit('chat-message', { message: message, name: users[socket.id] });
+  socket.on('send-chat-message', data => {
+    console.log(`Message received from ${users[socket.id]}: ${data.message}`);
+    socket.broadcast.emit('chat-message', { message: data.message, sender: data.sender });
     console.log(`Message emitted to all clients except the sender`);
   });
   
-  
-    
 
   socket.on('disconnect', () => {
-    socket.broadcast.emit('user-disconnected', users[socket.id]);
+    io.emit('user-disconnected', users[socket.id]);
     delete users[socket.id];
   });
 });
