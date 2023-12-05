@@ -5,6 +5,11 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
   <script defer src="script.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@700&display=swap');
+  </style>
+
 </head>
 <body>
   <div id="menu-bar">
@@ -18,7 +23,7 @@
   </div>
 
   <form id="send-window">
-    <input type="text" id="message-input" placeholder="Type your message...">
+    <textarea name="text" id="message-input" placeholder="Type your message..."></textarea>
     <button type="submit" id="send-button">Send</button>
   </form>
 </body>
