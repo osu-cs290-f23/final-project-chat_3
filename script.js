@@ -41,7 +41,7 @@ socket.on('user-disconnected', userName => {
 messageForm.addEventListener('submit', e => {
   e.preventDefault();
   const message = messageInput.value;
-  appendMessage(`You: ${message}`, true, userName);
+  appendMessage(`${message}`, true, userName);
   socket.emit('send-chat-message', { message, sender: userName });
   messageInput.value = '';
 });
@@ -81,12 +81,12 @@ messageInput.addEventListener('keypress', function(e) {
   }
 });
 
-// Function to handle sending the message (you can adjust this based on your needs)
+// Function to handle sending the message 
 function sendMessage() {
   const message = messageInput.value;
   if (message.trim() !== '') {
-    appendMessage(`You: ${message}`, true, 'You');
-    socket.emit('send-chat-message', { message, sender: 'You' });
+    appendMessage(`${message}`, true, '');
+    socket.emit('send-chat-message', { message, sender: '' });
     messageInput.value = '';
     // Reset the input field height
     messageInput.style.height = 'auto';
