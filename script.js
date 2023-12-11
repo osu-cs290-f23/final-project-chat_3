@@ -59,12 +59,6 @@ function appendMessage(message, isSent, sender) {
   messageContainer.scrollTop = messageContainer.scrollHeight;
 }
 
-// socket.emit('send-chat-message', { message, sender: userName });
-
-
-
-
-
 // Add an event listener for the 'input' event on the message input field
 messageInput.addEventListener('input', function() {
   // Set the height of the input field based on its scrollHeight
@@ -93,15 +87,6 @@ function sendMessage() {
   }
 }
 
-
-
-
-
-
-
-
-
-
 function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
   messageForm.classList.toggle('dark-mode');
@@ -111,4 +96,3 @@ function toggleDarkMode() {
   const menuBar = document.getElementById('menu-bar');
   menuBar.classList.toggle('dark-mode');
 }
-
