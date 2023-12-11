@@ -1,4 +1,4 @@
 # final-project-chat_3
 final-project-chat_3 created by GitHub Classroom
 
-a fairly simple chat app
+A chat app that allows users to send and recive messages.
