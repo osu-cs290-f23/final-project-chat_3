@@ -32,7 +32,7 @@ body {
 }
 
 .message.sent {
-  background-color: #4caf50; /* Green for sent messages */
+  background-color: #814caf; /* Green for sent messages */
   color: #fff;
 }
 
@@ -69,7 +69,7 @@ body {
 }
 
 #message-container::-webkit-scrollbar-thumb {
-  background-color: #4caf50; /* Color of the scrollbar thumb */
+  background-color: #814caf; 
   border-radius: 4px;
 }
 
@@ -96,7 +96,7 @@ body {
 
 #send-button {
   padding: 8px;
-  background-color: #4caf50;
+  background-color: #814caf;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -105,7 +105,7 @@ body {
 }
 
 #send-button:hover {
-  background-color: #45a049;
+  background-color: #6b448e;
 }
 
 .user-action {
@@ -148,7 +148,7 @@ body {
 }
 
 #message-container::-webkit-scrollbar-thumb {
-  background-color: #4caf50; /* Color of the scrollbar thumb */
+  background-color: #814caf; /* Color of the scrollbar thumb */
   border-radius: 4px;
 }
 
