@@ -61,7 +61,6 @@ function appendMessage(message, isSent, sender) {
 
 // Add an event listener for the 'input' event on the message input field
 messageInput.addEventListener('input', function() {
-  // Set the height of the input field based on its scrollHeight
   this.style.height = 'auto';
   this.style.height = (this.scrollHeight) + 'px';
 });
@@ -70,7 +69,6 @@ messageInput.addEventListener('input', function() {
 messageInput.addEventListener('keypress', function(e) {
   if (e.key === 'Enter') {
     e.preventDefault();
-    // Optionally, add logic to handle sending the message on Enter
     sendMessage();
   }
 });
