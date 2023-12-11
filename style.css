@@ -15,12 +15,12 @@ body {
 
 #user-name {
   color: #ffffff; /* Text color for user name */
-  font-size: 18px; /* Adjust the font size as needed */
+  font-size: 18px; 
 }
 
 #menu-bar-text {
   color: #ffffff; /* Text color for the menu bar text */
-  font-size: 18px; /* Adjust the font size as needed */
+  font-size: 18px; 
   width: 50%;
 }
 
@@ -137,7 +137,7 @@ body {
 #message-container {
   overflow-y: scroll;
   max-height: calc(113vh - 150px); /* Adjusted height based on screen height */
-  scrollbar-width: thin; /* Firefox */
+  scrollbar-width: thin;
 }
 
 #message-container::-webkit-scrollbar {
