@@ -36,12 +36,9 @@ body {
   color: #fff;
 }
 
-
 .message.received {
   background-color: #e6e6e6; /* Light gray for received messages */
 }
-
-
 
 #chat-window {
   max-width: 600px;
