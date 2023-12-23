@@ -80,8 +80,6 @@ function sendMessage() {
     appendMessage(`${message}`, true, '');
     socket.emit('send-chat-message', { message, sender: '' });
     messageInput.value = '';
-    // Reset the input field height
-    messageInput.style.height = 'auto';
   }
 }
 
@@ -89,7 +87,7 @@ function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
   messageForm.classList.toggle('dark-mode');
   messageInput.classList.toggle('dark-mode-input');
-  messageContainer.classList.toggle('dark-mode'); // Add this line to toggle dark mode for the message container
+  messageContainer.classList.toggle('dark-mode');
   messageContainer.scrollTop = messageContainer.scrollHeight;
   const menuBar = document.getElementById('menu-bar');
   menuBar.classList.toggle('dark-mode');
