@@ -59,6 +59,10 @@ body {
   padding-top: 5px;
   margin: 10px; /* Add margin for spacing */
   word-wrap: break-word; /* Break long words */
+
+  overflow-y: scroll;
+  scrollbar-width: thin;
+
 }
 
 #message-container::-webkit-scrollbar {
@@ -89,6 +93,9 @@ body {
   margin-right: 5px; /* Added margin to the right of the input */
   border: 1px solid #ccc;
   border-radius: 4px;
+  resize: vertical; 
+  max-height: 70px;
+  min-height: 70px;
 }
 
 #send-button {
@@ -132,12 +139,6 @@ body {
 
 .dark-mode #menu-bar {
   background-color: #2c2c2c; /* Dark mode menu bar background color */
-}
-
-#message-container {
-  overflow-y: scroll;
-  max-height: calc(113vh - 150px); /* Adjusted height based on screen height */
-  scrollbar-width: thin;
 }
 
 #message-container::-webkit-scrollbar {
