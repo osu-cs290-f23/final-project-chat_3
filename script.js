@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3000');
+const socket = io('https://webchat-1.azurewebsites.net/');
 const messageForm = document.getElementById('send-window');
 const messageInput = document.getElementById('message-input');
 const messageContainer = document.getElementById('message-container');
@@ -39,13 +39,13 @@ socket.on('user-disconnected', userName => {
 });
 
 messageForm.addEventListener('submit', e => {
-  e.preventDefault();
+  e.preventDefault(); // Prevent the default form submission behavior
+
   const message = messageInput.value;
   appendMessage(`${message}`, true, userName);
   socket.emit('send-chat-message', { message, sender: userName });
   messageInput.value = '';
 });
-
 
 function appendMessage(message, isSent, sender) {
   const messageElement = document.createElement('div');
