@@ -13,6 +13,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; /* Center items vertically */
+  height: 30%;
 }
 
 #user-name {
@@ -43,6 +44,7 @@ body {
 
 #chat-window {
   max-width: 600px;
+  height: 80vh;
   margin: 20px auto;
   background-color: #fff;
   padding: 20px;
